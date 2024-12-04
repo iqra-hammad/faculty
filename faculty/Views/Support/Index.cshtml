@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "Contact Support";
+}
+
+<div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: max-width: 800px; margin: 0 auto;">
+    <h1 style="color: #2c3e50; text-align: center; font-family: 'Arial', sans-serif; font-size: 36px; margin-bottom: 20px;">Contact Support Page</h1>
+    <p style="color: #34495e; font-size: 18px; line-height: 1.8; text-align: justify;">
+       
+            We are here to assist you with any queries related to surveys or any other issues you might face.
+            Whether you have questions, need technical support, or require guidance, our team is ready to help.
+            You can reach us through email, phone, or by visiting our office. We aim to respond promptly and ensure your concerns are addressed effectively.
+        
+    </p>
+    <ul style="list-style-type: none; padding: 0; margin-top: 20px; text-align: left; font-size: 18px;">
+        <li style="margin-bottom: 15px;">
+            <strong>Email us at:</strong>
+            <a href="#" style="color: #3498db; text-decoration: none; font-weight: bold;">
+                @ViewBag.Email
+            </a>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Call us:</strong>
+            <a href="tel:@ViewBag.Contact" style="color: #3498db; text-decoration: none; font-weight: bold;">
+                @ViewBag.Contact
+            </a>
+        </li>
+        <li>
+            <strong>Visit us at:</strong>
+            <span style="color: #2c3e50; font-weight: bold;">1234 Office Road, City Name, Country</span>
+        </li>
+    </ul>
+    <div style="display: flex; justify-content: space-between; margin: 20px;">
+      
+        <div style="flex: 1; margin-right: 20px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+           @*  //want to ask about this// *@
+            <form asp-action="Index" method="post">
+                <div style="margin-bottom: 15px;">
+                    <label for="Username" style="font-weight: bold;">Name:</label>
+                    <input type="text" name="Username" class="form-control" style="width: 100%; padding: 10px;" required>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="Usercontactnumber" style="font-weight: bold;">Contact Number:</label>
+                    <input type="text" name="Usercontactnumber" class="form-control" style="width: 100%; padding: 10px;" required>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="Useremail" style="font-weight: bold;">Email:</label>
+                    <input type="email" name="Useremail" class="form-control" style="width: 100%; padding: 10px;" required>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="Message" style="font-weight: bold;">Message:</label>
+                    <textarea name="Message" class="form-control" rows="4" style="width: 100%; padding: 10px;" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px;">Submit</button>
+            </form>
+           
+        </div>
+
+       
+        <div style="flex: 1; margin-left: 20px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+            <h2 style="text-align: center; color: #2c3e50;">Reach Us</h2>
+            <ul style="list-style-type: none; padding: 0; font-size: 16px;">
+                <li><strong>Email:</strong> <a href="#">@ViewBag.Email</a></li>
+                <li><strong>Contact:</strong> <a href="tel:@ViewBag.Contact">@ViewBag.Contact</a></li>
+                <li><strong>Address:</strong> 1234 Office Road, City Name, Country</li>
+            </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0196327117813!2d-122.08424918425012!3d37.4219999798257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7374e1ed5ef%3A0x2e9c4e450ee44048!2sGoogleplex!5e0!3m2!1sen!2sus!4v1615327428467!5m2!1sen!2sus"
+                    width="100%"
+                    height="250"
+                    style="border: 0; border-radius: 10px; margin-top: 20px;"
+                    allowfullscreen="">
+            </iframe>
+        </div>
+    </div>
+</div>
